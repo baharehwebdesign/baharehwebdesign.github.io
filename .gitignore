@@ -1,0 +1,41 @@
+# Operating system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Desktop.ini
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node / package managers
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# Environment and local configuration
+.env
+.env.*
+!.env.example
+
+# Generated output and caches
+dist/
+build/
+coverage/
+.cache/
+.parcel-cache/
+.vite/
+*.log
+
+# Temporary archives
+*.zip
+*.tar.gz
