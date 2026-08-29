@@ -5,7 +5,7 @@
 var APP_CONFIG = {
 
   /* ---------- where forms are delivered ---------- */
-  email: 'codewithbahareh@gmail.com',
+  email: '7dc07d8133e95b386f3864c35ccd6512',
   formEndpoint: 'https://formsubmit.co/ajax/',      // swap for Formspree if preferred
 
   links: {
