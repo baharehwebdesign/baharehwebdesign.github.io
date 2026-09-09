@@ -1,31 +1,67 @@
-# Google Search launch checklist
+# 📈 گزارش تغییرات سئو — سایت Code with Bahareh
 
-The technical SEO files are already included. Complete these account-level steps after the first GitHub Pages deployment:
 
-1. Open Google Search Console and add the URL-prefix property:
-   `https://baharehwebdesign.github.io/`
-2. Complete the verification method offered by Search Console.
-3. Submit:
-   `https://baharehwebdesign.github.io/sitemap.xml`
-4. Use URL Inspection and request indexing for:
+## ✅ چه تغییراتی در هر فایل انجام شد
+
+| فایل | تغییرات |
+|---|---|
+| `index.html` | عنوان/توضیح/keywords جدید با نام کامل (EN) • متا geo برای اصفهان • **JSON-LD کاملاً بازنویسی شد**: موجودیت Person با نام «Bahareh Karbalaei» + نام‌های جایگزین فارسی («بهاره کربلایی»...) + آدرس اصفهان • افزودن **ProfessionalService** (برای رتبه‌بندی محلی «در اصفهان») • WebSite با نام‌های جایگزین فارسی |
+| `fa/index.html` | عنوان: **«بهاره کربلایی \| طراحی صفحات وب — وب دولوپر در اصفهان»** • توضیح و keywords فارسی • متن About فارسی با نام کامل (قابل‌کراول حتی بدون جاوااسکریپت) • فیکس باگ og:locale |
+| `en/index.html` | عنوان: **«Bahareh Karbalaei — Web Developer & Web Designer \| Code with Bahareh»** • توضیح/keywords انگلیسی با Isfahan |
+| `it/index.html` | عنوان: **«Bahareh Karbalaei — Sviluppatrice Web \| Code with Bahareh»** • توضیح/keywords ایتالیایی • فیکس باگ og:locale |
+| `script.js` + `script.min.js` | متن about_p1 در هر سه زبان با نام کامل و کلمات کلیدی به‌روز شد (نسخه‌ی minified هم با terser بازسازی شد) |
+| `sitemap.xml` | تاریخ lastmod به 2026-09-03 به‌روز شد |
+| `tools/generate_language_pages.py` | مولد صفحات زبانی به‌روز شد تا همه‌ی این بهینه‌سازی‌ها به‌صورت خودکار روی هر سه زبان اعمال (و اکنون باگ og:locale:alternate را هم اصلاح می‌کند) |
+
+### نام‌های جایگزینی که گوگل حالا می‌شناسد (در داده‌های ساخت‌یافته):
+بهاره کربلایی · بهاره کربلایی وب دولوپر · بهاره کربلایی طراح وب · کدنویسی با بهاره · Code with Bahareh · Bahareh Web Design
+
+---
+
+## 🚀 روش انتشار (۵ دقیقه)
+
+1. فایل‌های داخل پوشه‌ی `bahareh-seo` را روی فایل‌های ریپوتان **کپی و جایگزین** کنید (مسیر هر فایل دقیقاً مثل ریپو حفظ شده).
+2. فایل باقی‌مانده‌ی قدیمی را حذف کنید (تکراری و مضر برای سئو):
+   ```bash
+   git rm it/111index.html
+   ```
+   (اختیاری: فایل بدون‌کاربرد `img/hi` هم قابل‌حذف است)
+3. کامیت و پوش:
+   ```bash
+   git add -A
+   git commit -m "SEO: add full name/keywords/localized metadata + fixed locale alternates"
+   git push
+   ```
+
+---
+
+## 🎯 بعد از انتشار (خیلی مهم — تاثیر را از هفته‌ها به روزها می‌رساند)
+
+1. **Google Search Console** → بخش Sitemaps → آدرس `https://baharehwebdesign.github.io/sitemap.xml` را دوباره ثبت کنید.
+2. در GSC روی **URL Inspection** کلیک کنید و برای این ۴ آدرس دکمه‌ی **Request Indexing** بزنید:
    - `https://baharehwebdesign.github.io/`
    - `https://baharehwebdesign.github.io/en/`
    - `https://baharehwebdesign.github.io/fa/`
    - `https://baharehwebdesign.github.io/it/`
-5. Test the home page with Google Rich Results Test.
-6. Test the Open Graph image with the sharing debuggers of the target social platforms.
+3. **Bing Webmaster Tools** (شما فایل BingSiteAuth.xml را دارید) → سایت‌مپ را دوباره ارسال کنید.
+4. در اینستاگرام/یوتیوب/تلگرام خود لینک سایت را بگذارید — این لینک‌های برگشتی (بک‌لینک) برای رتبه‌بندی نام‌تان طلایی‌اند.
 
-## Site-name signals already included
+---
 
-- Consistent visible name: `Code with Bahareh`
-- `<title>` and application name
-- `og:site_name`
-- WebSite structured data with `name` and `alternateName`
-- Canonical URLs and hreflang language pages
-- Favicon, Apple touch icon, and web app manifest
+## ⏱️ انتظار واقع‌بینانه (لطفاً بخوانید)
 
-Google chooses and updates a displayed site name algorithmically; no markup can guarantee the exact timing or wording. Search Console submission and consistent naming are the correct final steps.
+- عبارات **نام‌شخصی** («بهاره کربلایی»، «Bahareh Karbalaei»، «بهاره کربلایی وب دولوپر»): رقابت پایین است و معمولاً **طی یک تا چهار هفته** بعد از ایندکس مجدد در صفحه‌ی اول ظاهر می‌شوید. این سریع‌ترین نتیجه است.
+- عبارات **ترکیبی** مثل «طراحی صفحه وب در اصفهان»، «web designer Isfahan»: چند ماه زمان می‌برد و به محتوای بیشتر و بک‌لینک نیاز دارد.
+- عبارات **بسیار عمومی** مثل «طراحی صفحات وب» یا «web design»: بسیار رقابتی‌اند؛ سایت‌های قدیمی و بزرگ رتبه دارند. این عبارات را هدف بزنید ولی انتظار نتیجه‌ی فوری نداشته باشید. مقالات بلاگ فارسی (مثلاً «چگونه یک صفحه‌ی وب طراحی کنیم») بهترین سلاح برای این دسته است.
 
-## Session share links
+راه‌های تقویت ادامه‌دار: ① صفحه‌های اختصاصی «طراحی سایت در اصفهان» به فارسی ② ثبت در Google Business Profile ③ مقاله‌ی بلاگ با کلمات کلیدی فارسی ④ لینک‌سازی از دی‌و‌تِن/Dev.to و LinkedIn.
 
-A URL such as `https://baharehwebdesign.github.io/en/#html-s1` opens correctly when pasted into a browser address bar. The fragment after `#` is handled by the site after GitHub Pages serves the language page. Fragment URLs are not normally indexed as separate Google result pages; the language landing pages are the intended indexable URLs.
+---
+
+## ⚠️ نکته‌های فنی برای مراجعات بعدی
+
+- برای هر تغییر در متن‌های سایت، فقط `index.html` و `script.js` را ویرایش کنید و بعد این‌ها را بزنید تا ۴ صفحه و فایل minified ساخته شوند: `npm run build`
+- صفحه‌ی ریشه (`/`) و `/en/` انگلیسی‌اند و نقش x-default را دارند — کانوایکال درست تنظیم شده‌اند.
+- اگر روزی دامنه‌ی اختصاصی خریدید (توصیه می‌شود)، فقط مقدار ORIGIN بالای اسکریپت‌ی تولیدکننده و آدرس‌های canonical/hreflang/sitemap را به‌روز کنید.
+
+موفق باشید بهاره! 🌷
