@@ -578,7 +578,7 @@ var APP_CONFIG = {
     // ===== درباره من =====
     about_eyebrow: 'About',
     about_title: 'Why learn with me — and why <em>hire</em> me',
-    about_p1: 'I\'m <strong>Bahareh</strong> — a freelance web developer and coding educator. What i do:',
+    about_p1: 'I\'m <strong>Bahareh Karbalaei</strong> — a freelance web developer &amp; web designer in Isfahan, Iran, and a coding educator. What I do:',
     about_p2: 'My method is simple: <strong>show the smallest working thing first</strong>, then grow it. Short lessons, real projects, code you can actually ship.',
     about_v1: 'build fast, accessible websites for founders and small businesses',
     about_v2: 'Free courses that are genuinely useful',
@@ -774,7 +774,7 @@ var APP_CONFIG = {
     // ===== درباره من =====
     about_eyebrow: 'درباره من',
     about_title: '',
-    about_p1: '<strong>بهاره</strong> هستم — توسعه‌دهنده‌ی وب فریلنس و مدرس کدنویسی. ',
+    about_p1: '<strong>بهاره کربلایی</strong> هستم — وب دولوپر و طراح صفحات وب فریلنس ساکن اصفهان و مدرس کدنویسی. این‌ها کارهایی هست که انجام می‌دهم:',
     about_p2: 'روش من ساده است: <strong>اول کوچک‌ترین چیزی که کار می‌کند را نشان بده</strong>، بعد آن را بزرگ کن. درس‌های کوتاه، پروژه‌های واقعی، کدی که واقعاً قابل استفاده باشد.',
     about_v1: 'ساخت وب‌سایت‌های سریع و در دسترس برای بنیان‌گذاران و کسب‌وکارهای کوچک',
     about_v2: 'دوره‌های رایگانی که واقعاً مفیدند',
@@ -970,7 +970,7 @@ var APP_CONFIG = {
     // ===== درباره من =====
     about_eyebrow: 'Chi sono',
     about_title: 'Perché imparare con me — e perché <em>assumermi</em>',
-    about_p1: 'Sono <strong>Bahareh</strong> — sviluppatrice web freelance ed educatrice di programmazione. Creo siti veloci e accessibili per fondatori e piccole imprese, e insegno ai principianti a scrivere la loro prima riga di HTML senza paura.',
+    about_p1: 'Sono <strong>Bahareh Karbalaei</strong> — sviluppatrice web freelance e web designer a Isfahan (Iran), ed educatrice di programmazione. Creo siti veloci e accessibili per fondatori e piccole imprese, e insegno ai principianti a scrivere la loro prima riga di HTML senza paura.',
     about_p2: 'Il mio metodo è semplice: <strong>mostra prima la cosa più piccola che funziona</strong>, poi falla crescere. Lezioni brevi, progetti reali, codice pubblicabile.',
     about_v1: 'Siti veloci e accessibili per fondatori e piccole imprese',
     about_v2: 'Corsi gratuiti davvero utili',
