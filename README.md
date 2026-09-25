@@ -127,6 +127,42 @@ git push -u origin main
 
 Each language entry page contains static localized title, description, canonical, Open Graph, Twitter Card, locale, and hero copy. This solves the common problem where social bots show English metadata because they do not execute client-side JavaScript.
 
+### Static (crawlable) body text — the Persian-search fix
+
+Localized metadata is not enough: a search engine also needs the *body* in the
+page language. `/en/`, `/fa/` and `/it/` are therefore generated with their text
+already written into the HTML:
+
+- every `data-i18n`, `data-i18n-placeholder` and `data-i18n-aria-label` element
+  is filled from `APP_CONFIG.i18n`,
+- `#faqList`, `#ytGrid`, the Persian course-video section and the course
+  catalog `#courseList` are written out statically,
+- the author bio (`.about__more[data-langblock="bio"]`) and the surname inside
+  the `<h1>` (`[data-langblock="name"]`) are localized,
+- the `Person` entity lists every spelling of the name (`Bahareh Karbalaei`,
+  `Bahare Karbalaei`, «بهاره کربلایی» / «بهاره کربلائی») via `alternateName`,
+- the JSON-LD keeps a localized `WebPage` node plus a `FAQPage` node.
+
+`script.js` re-renders exactly the same values at runtime, so visitors see an
+unchanged page — the text is simply there for crawlers before JavaScript runs.
+`/fa/` went from ~35 Persian words in the HTML source to ~1,320.
+
+Build:
+
+```bash
+npm run build            # css + js + language pages
+npm run build:languages  # only regenerate /en/, /fa/, /it/  (needs node)
+```
+
+`tools/extract_app_config.js` dumps `APP_CONFIG` from `script.js` as JSON and is
+used by `tools/generate_language_pages.py`. Re-run `build:languages` after
+adding or editing any string in `APP_CONFIG.i18n`, any FAQ entry, any course,
+or any element carrying `data-i18n` in `index.html`.
+
+Name-spelling variants live in one place: `PERSON_ALTERNATE_NAMES` (schema) and
+the `title`/`description`/`keywords`/`bio` entries in `LANGS` at the top of the
+generator. The root `index.html` mirrors the English values by hand.
+
 ## Contact form
 
 The visible email is not a link. The contact form sends through FormSubmit's HTTPS AJAX endpoint and includes a honeypot. FormSubmit activation requires one manual confirmation from the destination inbox after deployment; see `FORM_SETUP.md`.
