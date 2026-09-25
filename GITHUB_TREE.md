@@ -22,6 +22,7 @@ baharehwebdesign.github.io/
 │   ├── og-cover.png
 │   └── transparent-profile-430-580.png
 ├── tools/
+│   ├── extract_app_config.js
 │   └── generate_language_pages.py
 ├── .gitignore
 ├── .nojekyll
