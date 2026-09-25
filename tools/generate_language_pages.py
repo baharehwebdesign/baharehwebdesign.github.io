@@ -18,7 +18,8 @@ Now: every language page is generated with its text already inside the HTML:
   3. the video grid (#ytGrid) and the Persian course-video section
      (#courseVideoMount) are written out statically,
   4. the course catalog (#courseList) is written out statically,
-  5. a localized bio block (.about__more[data-langblock="bio"]) is filled,
+  5. the About bio (about_bio1/about_bio2/about_p2) and the H1 surname
+     (hero_name_full) are filled from the same dictionary,
   6. the JSON-LD gets a localized WebPage + FAQPage node,
   7. title/description/keywords/og/twitter/canonical keep being localized.
 
@@ -50,7 +51,7 @@ PERSON_NAME = "Bahareh Karbalaei"
 PERSON_ALTERNATE_NAMES = [
     "بهاره کربلایی",
     "بهاره کربلائی",
-    "بهاره کربلایی اصفهان",
+    "بهاره کربلایی ایران",
     "Bahare Karbalaei",
     "کدنویسی با بهاره",
     "Code with Bahareh",
@@ -66,48 +67,30 @@ LANGS = {
         "locale": "en_US",
         "locale_alternates": ["fa_IR", "it_IT"],
         "title": "Bahareh Karbalaei — Web Developer &amp; Web Designer | Code with Bahareh",
-        "description": "Bahareh Karbalaei (also written Bahare Karbalaei) — freelance web developer &amp; web designer in Isfahan, Iran. Custom web design, fast responsive websites, and free/premium HTML/CSS courses.",
-        "keywords": "Bahareh Karbalaei, Bahare Karbalaei, Bahareh web developer, web developer Bahareh, web designer Bahareh, Bahareh web design, web design, web designer, designing professional website, web developer in Isfahan, web design Isfahan, hire freelance developer, learn HTML CSS, free coding courses, buy website templates, web components, coding educator, Code with Bahareh",
-        "full_name": "Karbalaei",
-        "person_description": "Freelance web developer, web designer in Isfahan, Iran, and coding educator. Fast, accessible websites and practical HTML/CSS courses.",
-        "service_description": "Web design and development services by Bahareh Karbalaei — custom, fast and responsive pages built from Isfahan, Iran, for clients worldwide.",
-        "bio": [
-            "<strong>Bahareh Karbalaei</strong> (also written <em>Bahare Karbalaei</em>; in Persian: <strong>بهاره کربلایی</strong>) is a freelance web developer and web designer based in Isfahan, Iran, and the creator of <a href=\"#courses\">Code with Bahareh</a> — a course platform teaching HTML, CSS and JavaScript from scratch. She builds fast, accessible, responsive websites for founders, freelancers and small businesses, and publishes the same practical method she uses in client work as free lessons.",
-            "The free track walks through HTML structure, text, lists, links, images and JavaScript from zero, with every session ending in an editable code exercise and a quiz. The premium sessions go deeper: semantic HTML and accessibility, SEO metadata and structured data, responsive layout with Flexbox and Grid, and CSS animation — including personal code review on your own build.",
-            "Courses, videos and community: the tutorials are published on the Code with Bahareh YouTube channel (12K+ subscribers, 80+ videos) and shared on Instagram and Telegram. Bahareh Karbalaei takes on a limited number of freelance builds each quarter — landing pages, portfolios and small business sites; send a short brief through the <a href=\"#contact\">contact form</a> and you get a fixed price within 48 hours.",
-        ],
+        "description": "Bahareh Karbalaei — freelance web developer &amp; web designer in Iran. Custom web design, fast responsive websites, and free/premium HTML/CSS courses.",
+        "keywords": "Bahareh Karbalaei, Bahare Karbalaei, Bahareh web developer, web developer Bahareh, web designer Bahareh, Bahareh web design, web design, web designer, designing professional website, web developer in Iran, web design Iran, hire freelance developer, learn HTML CSS, free coding courses, buy website templates, web components, coding educator, Code with Bahareh",
+        "person_description": "Freelance web developer, web designer in Iran, and coding educator. Fast, accessible websites and practical HTML/CSS courses.",
+        "service_description": "Web design and development services by Bahareh Karbalaei — custom, fast and responsive pages built in Iran for clients worldwide.",
     },
     "fa": {
         "dir": "rtl",
         "locale": "fa_IR",
         "locale_alternates": ["en_US", "it_IT"],
-        "title": "بهاره کربلایی (Bahareh Karbalaei) — طراح سایت و وب دولوپر در اصفهان",
-        "description": "بهاره کربلایی (به لاتین Bahareh Karbalaei و Bahare Karbalaei) — وب دولوپر و طراح صفحات وب در اصفهان؛ طراحی سایت سریع و واکنش‌گرا + دوره‌های رایگان و پرمیوم HTML/CSS.",
-        "keywords": "بهاره کربلایی, بهاره کربلائی, بهاره کربلایی طراح سایت, بهاره کربلایی اصفهان, بهاره کربلایی وب دولوپر, طراح سایت اصفهان, طراحی صفحات وب, طراحی صفحه وب, طراحی سایت در اصفهان, وب دیزاین, کدنویسی با بهاره, آموزش HTML و CSS, دوره رایگان کدنویسی, طراح وب فریلنس, Bahareh Karbalaei",
-        "full_name": "کربلایی",
-        "person_description": "بهاره کربلایی — وب دولوپر، طراح صفحات وب در اصفهان و مدرس کدنویسی؛ طراحی وب‌سایت سریع، واکنش‌گرا و دسترس‌پذیر.",
-        "service_description": "خدمات طراحی و توسعه صفحات وب توسط بهاره کربلایی — طراحی صفحه وب سفارشی، سریع و واکنش‌گرا از اصفهان برای مشتریان سراسر دنیا.",
-        "bio": [
-            "<strong>بهاره کربلایی</strong> (نام لاتین: <em>Bahareh Karbalaei</em>، که گاهی <em>Bahare Karbalaei</em> هم نوشته می‌شود) وب‌دولوپر و طراح صفحات وب فریلنس اهل اصفهان است و پروژه‌های «کدنویسی با بهاره» (Code with Bahareh) را اداره می‌کند. کار او ساخت صفحه‌های وب سریع، واکنش‌گرا و دسترس‌پذیر برای فریلنسرها، کسب‌وکارهای کوچک و صاحبان ایده است؛ همان روشی که در پروژه‌های واقعی به کار می‌برد، در <a href=\"#courses\">دوره‌های سایت</a> هم آموزش می‌دهد.",
-            "مسیر رایگان دوره‌ها از ساختار HTML و تگ‌های معنایی شروع می‌شود و با متن، فهرست‌ها، لینک‌ها، تصویرها و جاوااسکریپت مقدماتی ادامه پیدا می‌کند؛ پایان هر جلسه یک تمرین کد قابل ویرایش و یک آزمون دارد. جلسه‌های پرمیوم کمی جلوتر می‌روند: HTML معنایی و دسترس‌پذیری، سئو و متادیتا، چیدمان ریسپانسیو با Flexbox و Grid و انیمیشن CSS — همراه با بازبینی شخصی کد شما.",
-            "آموزش‌ها در کانال یوتیوب «کدنویسی با بهاره» (بیش از ۱۲ هزار مشترک و ۸۰ ویدیو) منتشر می‌شوند و در اینستاگرام و تلگرام هم در دسترس‌اند. بهاره کربلایی هر فصل تعداد محدودی پروژه‌ی فریلنس می‌پذیرد؛ لندینگ‌پیج، نمونه‌کار و سایت کسب‌وکار کوچک. برای سفارش، از <a href=\"#contact\">فرم تماس</a> توضیح کوتاهی بفرستید تا ظرف ۴۸ ساعت قیمت مقطوع بگیرید.",
-        ],
+        "title": "بهاره کربلایی (Bahareh Karbalaei) — طراح سایت و وب دولوپر در ایران",
+        "description": "بهاره کربلایی — وب دولوپر و طراح صفحات وب در ایران؛ طراحی سایت و صفحه وب حرفه‌ای، سریع و واکنش‌گرا + دوره‌های رایگان و پرمیوم HTML/CSS.",
+        "keywords": "بهاره کربلایی, بهاره کربلائی, بهاره کربلایی طراح سایت, بهاره کربلایی ایران, بهاره کربلایی وب دولوپر, طراح سایت ایران, طراحی صفحات وب, طراحی صفحه وب, طراحی سایت در ایران, وب دیزاین, کدنویسی با بهاره, آموزش HTML و CSS, دوره رایگان کدنویسی, طراح وب فریلنس, Bahareh Karbalaei",
+        "person_description": "بهاره کربلایی — وب دولوپر، طراح صفحات وب در ایران و مدرس کدنویسی؛ طراحی وب‌سایت سریع، واکنش‌گرا و دسترس‌پذیر.",
+        "service_description": "خدمات طراحی و توسعه صفحات وب توسط بهاره کربلایی — طراحی صفحه وب سفارشی، سریع و واکنش‌گرا برای مشتریان سراسر دنیا.",
     },
     "it": {
         "dir": "ltr",
         "locale": "it_IT",
         "locale_alternates": ["en_US", "fa_IR"],
         "title": "Bahareh Karbalaei — Sviluppatrice Web | Code with Bahareh",
-        "description": "Bahareh Karbalaei — sviluppatrice web freelance e web designer a Isfahan (Iran): web design, siti web veloci e responsive, corsi HTML/CSS gratuiti e premium.",
-        "keywords": "Bahareh Karbalaei, sviluppatrice web Bahareh, web designer Bahareh, sviluppatrice web, web designer, web design, realizzazione siti web, sviluppatrice web freelance, web developer Isfahan, web design Isfahan, corsi HTML CSS gratuiti, corsi coding premium, Code with Bahareh",
-        "full_name": "Karbalaei",
-        "person_description": "Sviluppatrice web freelance, web designer a Isfahan (Iran) ed educatrice di programmazione. Siti veloci, accessibili e corsi HTML/CSS pratici.",
-        "service_description": "Servizi di web design e sviluppo web di Bahareh Karbalaei — pagine su misura, veloci e responsive, da Isfahan (Iran) per clienti in tutto il mondo.",
-        "bio": [
-            "<strong>Bahareh Karbalaei</strong> è una sviluppatrice web freelance e web designer con base a Isfahan (Iran), ideatrice di <a href=\"#courses\">Code with Bahareh</a>, una piattaforma di corsi che insegna HTML, CSS e JavaScript da zero. Realizza siti veloci, accessibili e responsive per founder, freelance e piccole imprese, e pubblica lo stesso metodo dei progetti reali come lezioni gratuite.",
-            "Il percorso gratuito parte dalla struttura HTML e dai tag semantici, poi testo, liste, link, immagini e JavaScript di base: ogni sessione si chiude con un esercizio di codice modificabile e un quiz. Le sessioni premium approfondiscono HTML semantico e accessibilità, SEO e metadati, layout responsive con Flexbox e Grid e animazioni CSS, con revisione personale del tuo codice.",
-            "I tutorial sono pubblicati sul canale YouTube Code with Bahareh (oltre 12.000 iscritti e più di 80 video) e condivisi su Instagram e Telegram. Bahareh Karbalaei accetta un numero limitato di progetti freelance ogni trimestre — landing page, portfolio e siti per piccole imprese; invia un brief dal <a href=\"#contact\">modulo di contatto</a>: ricevi un prezzo fisso entro 48 ore.",
-        ],
+        "description": "Bahareh Karbalaei — sviluppatrice web freelance e web designer in Iran: web design, siti web veloci e responsive, corsi HTML/CSS gratuiti e premium.",
+        "keywords": "Bahareh Karbalaei, sviluppatrice web Bahareh, web designer Bahareh, sviluppatrice web, web designer, web design, realizzazione siti web, sviluppatrice web freelance, web developer Iran, web design Iran, corsi HTML CSS gratuiti, corsi coding premium, Code with Bahareh",
+        "person_description": "Sviluppatrice web freelance, web designer in Iran ed educatrice di programmazione. Siti veloci, accessibili e corsi HTML/CSS pratici.",
+        "service_description": "Servizi di web design e sviluppo web di Bahareh Karbalaei — pagine su misura, veloci e responsive, dall'Iran per clienti in tutto il mondo.",
     },
 }
 
@@ -273,15 +256,6 @@ def bake_i18n(page: str, i18n: dict, lang: str) -> tuple[str, int]:
     return page, baked
 
 
-def bake_bio(page: str, lang: str) -> str:
-    """Fill the localized author bio (.about__more) with real prose paragraphs."""
-    paragraphs = "\n        ".join(f"<p>{text}</p>" for text in LANGS[lang]["bio"])
-    return replace_inner_by_marker(
-        page,
-        r'<div class="about__more" data-langblock="bio">',
-        "\n        " + paragraphs + "\n      ",
-    )
-
 
 def bake_faq(page: str, faq: list, lang: str, i18n: dict) -> str:
     """Write the FAQ list out statically (same markup as renderFaq())."""
@@ -392,18 +366,6 @@ def bake_courses(page: str, courses: list, lang: str, i18n: dict) -> str:
         )
     return replace_inner(page, "courseList", "\n      " + "\n      ".join(cards) + "\n    ")
 
-
-def bake_name(page: str, lang: str) -> str:
-    """Complete the <h1> with the surname as screen-reader text.
-
-    The visible H1 is the brand line "code with Bahareh" / «کدنویسی با بهاره»;
-    the hidden part turns it into the full name for assistive tech, and search
-    engines read the complete name in the H1 of every language page."""
-    return replace_inner_by_marker(
-        page,
-        r'<span class="u-sr" data-langblock="name">',
-        LANGS[lang]["full_name"],
-    )
 
 
 def bake_jsonld(page: str, lang: str, app: dict) -> str:
@@ -521,8 +483,6 @@ def build(lang: str, template: str, app: dict) -> bool:
 
     # ---- the actual fix: real text in the HTML, not only after JS runs ----
     page, baked = bake_i18n(page, i18n, lang)
-    page = bake_bio(page, lang)
-    page = bake_name(page, lang)
     page = bake_faq(page, app["faq"], lang, i18n)
     page = bake_course_videos(page, lang, i18n)
     if lang == "fa":  # the course-video section only exists on the Persian page
@@ -563,11 +523,6 @@ def update_sitemap(changed_langs: list[str]) -> None:
 
 def main() -> None:
     template = (ROOT / "index.html").read_text(encoding="utf-8")
-    if 'data-langblock="bio"' not in template:
-        raise SystemExit(
-            'index.html must contain <div class="about__more" data-langblock="bio">…</div> '
-            "so the bio can be localized."
-        )
     app = load_app_config()
     changed = [lang for lang in LANGS if build(lang, template, app)]
     update_sitemap(changed)
